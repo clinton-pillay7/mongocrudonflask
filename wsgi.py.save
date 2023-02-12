@@ -29,18 +29,10 @@ def home():
 	for document in documents:
 		document["_id"] = str(document["_id"])
 		response.append(document)
-	return jsonify(response)
+	return jsonify(response
 
-@app.route("/api")
-def home():
-#    return f"Container ID: {socket.gethostname()}"
-#        return dblist
-        documents = mycol.find()
-        response = []
-        for document in documents:
-                document["_id"] = str(document["_id"])
-                response.append(document)
-        return jsonify(response)
+
+
 
 
 if __name__ == "__main__":
