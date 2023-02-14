@@ -29,8 +29,8 @@ def home():
 @app.route("/api")
 def api():
 	#return f"Container ID: {socket.gethostname()}"
-	#gender = request.args.get('gendervar')
-	documents = mycol.find({"gender":"Female"})
+	gender = request.args.get('gendervar')
+	documents = mycol.find({"gender":gender})
 	response = []
 	for document in documents:
 		document["_id"] = str(document["_id"])
